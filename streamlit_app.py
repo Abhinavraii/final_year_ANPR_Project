@@ -221,7 +221,9 @@ except serial.SerialException as e:
     st.error(f"Error connecting to Arduino: {e}")
 
 # Set Tesseract command to the correct path
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
+
+# pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract'
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
 # Load the custom-trained YOLOv8 model
 model = YOLO('best.pt')
